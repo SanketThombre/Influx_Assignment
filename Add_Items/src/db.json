@@ -1,3 +1,8 @@
-{
-    "itemMaster":[]
-}
+[
+    {
+        "code":100,
+        "name":"Popcorn",
+        "price":20
+        
+    }
+]

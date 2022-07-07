@@ -6,10 +6,16 @@ const items = require("./db.json");
 const app = express();
 
 app.post('/items', (req, res) => {
-    return res.send({ items : items });
+  const newItem = req.body;
+  items.push(newItem);
+  res.json(items);
+  console.log(res);
 });
 
-
-app.listen(3000, async() => {
-  console.log('Server is running on port 3000');
-});
+app.get("", (req, res) => {
+  
+  return res.send({items:items});
+})
+app.listen(3000, function () {
+  console.log("listening on port 3000");
+})
